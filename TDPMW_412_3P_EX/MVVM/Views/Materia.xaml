@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDPMW_412_3P_EX.Materia"
+             Title="Materia"
+             IconImageSource="persona.png"
+             BackgroundColor="MediumPurple">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame Margin="15"
+                   BackgroundColor="SlateBlue"
+                   BorderColor="Transparent">
+                <VerticalStackLayout>
+                    <Label Text="Alta de materia"
+                           HorizontalTextAlignment="Center"
+                           FontSize="Header"
+                           FontFamily="pixel"></Label>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout Margin="15">
+                            <Label Text="Nombre materia: " 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Nombre de materia"
+                                   x:Name="txtNombreMateria"
+                                   BackgroundColor="Grey"
+                                   WidthRequest="300"
+                                   Text="{Binding NombreMateria}"></Entry>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Margin="5">
+                            <Label Text="Rubro 1: " 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Rubro1"
+                                   x:Name="txtNombreRubro1"
+                                   BackgroundColor="Grey"
+                                   Margin="5"
+                                   WidthRequest="200"
+                                   Text="{Binding Rubro1}"></Entry>
+                            <Label Text="Valor:"
+                                   FontFamily="pixel"
+                                   FontSize="Medium"
+                                   VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                                   x:Name="txtValorRubro1"
+                                   BackgroundColor="Grey"
+                                   Margin="5"
+                                   WidthRequest="200"
+                                   Text="{Binding porcentage1}"></Entry>
+                            <Label Text="Calificacion:"
+                                   FontFamily="pixel"
+                                   FontSize="Medium"
+                                   VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                                   x:Name="txtCalificacionRubro1"
+                                   BackgroundColor="Grey"
+                                   WidthRequest="200"
+                                   Margin="5"
+                                   Text="{Binding cal1}"></Entry>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Margin="5">
+                            <Label Text="Rubro 2: " 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Rubro 2"
+                                   x:Name="txtNombreRubro2"
+                                   BackgroundColor="Grey"
+                                   Margin="5"
+                                   WidthRequest="200"
+                                   Text="{Binding Rubro2}"></Entry>
+                            <Label Text="Valor:"
+                                   FontFamily="pixel"
+                                   FontSize="Medium"
+                                   VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                                   x:Name="txtValorRubro2"
+                                   BackgroundColor="Grey"
+                                   Margin="5"
+                                   WidthRequest="200"
+                                   Text="{Binding porcentage2}"></Entry>
+                            <Label Text="Calificacion:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                                   x:Name="txtCalificacionRubro2"
+                               BackgroundColor="Grey"
+                               WidthRequest="200"
+                               Margin="5"
+                                   Text="{Binding cal2}"></Entry>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Margin="5">
+                            <Label Text="Rubro 3: " 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Rubro 3"
+                                   x:Name="txtNombreRubro3"
+                                   BackgroundColor="Grey"
+                                   WidthRequest="200"
+                                   Margin="5"
+                                   Text="{Binding Rubro3}"></Entry>
+                            <Label Text="Valor:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                                   x:Name="txtValorRubro3"
+                                   BackgroundColor="Grey"
+                                   WidthRequest="200"
+                                   Margin="5"
+                                   Text="{Binding porcentage3}"></Entry>
+                            <Label Text="Calificacion:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                                   x:Name="txtCalificacionRubro3"
+                                   BackgroundColor="Grey"
+                                   WidthRequest="200"
+                                   Margin="5"
+                                   Text="{Binding cal3}"></Entry>
+                        </HorizontalStackLayout>
+                        <Button Text="Calcular Calificacion"
+                                x:Name="btnCalcular"
+                                Margin="10"
+                                FontFamily="pixel"
+                                FontSize="Medium"
+                                Command="{Binding Calculo}"></Button>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

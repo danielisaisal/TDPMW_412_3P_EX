@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDPMW_412_3P_EX.MVVM.Views.Inicio"
+            xmlns:local="clr-namespace:TDPMW_412_3P_EX"
+            BarBackgroundColor="BlueViolet"
+             Title="Inicio">
+
+    <ContentPage IconImageSource="home.png" 
+                 BackgroundColor="MediumPurple"
+                 Title="Inicio">
+        <ScrollView>
+            <Grid RowDefinitions=".15*,.85*">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                        <GradientStop Offset="0.0" Color="#051937"></GradientStop>
+                        <GradientStop Offset="0.23" Color="#0400ff"></GradientStop>
+                        <GradientStop Offset="0.55" Color=" MediumPurple"></GradientStop>
+                        <GradientStop Offset="0.86" Color="Goldenrod"></GradientStop>
+                        <GradientStop Offset="1" Color="Coral"></GradientStop>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Label Text="EXAMEN FINAL" 
+                           FontSize="Header"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="pixel"
+                           Grid.Row="0"></Label>
+
+                <VerticalStackLayout Grid.Row="1">
+                    <Label Text="Alumno: Daniel Isaí Saldaña Rocha" 
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="pixel"></Label>
+
+                    <Label Text="Grupo: 412"
+                           FontSize="Medium"
+                           FontFamily="pixel"
+                           HorizontalTextAlignment="Center"></Label>
+
+                    <Label Text="Carrera: Ing. En Software y Sistemas Computacionales"
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="pixel"></Label>
+
+                    <Image Source="cientific.gif"
+                           IsAnimationPlaying="True"
+                           HeightRequest="350"
+                           WidthRequest="400"
+                           HorizontalOptions="Center"></Image>
+                </VerticalStackLayout>
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage>
+
+    <local:Materia IconImageSource="persona.png"></local:Materia>
+    <local:Semestre IconImageSource="work.png"></local:Semestre>
+
+</TabbedPage>

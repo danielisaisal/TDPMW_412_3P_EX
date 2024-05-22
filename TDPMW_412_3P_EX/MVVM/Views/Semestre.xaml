@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDPMW_412_3P_EX.Semestre"
+             Title="Semestre"
+             IconImageSource="work.png"
+             BackgroundColor="MediumPurple">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame Margin="15"
+                   BackgroundColor="SlateBlue"
+                   BorderColor="Transparent">
+                <VerticalStackLayout>
+                    <Label Text="Alta semestre"
+                           HorizontalTextAlignment="Center"
+                           FontSize="Header"
+                           FontFamily="pixel"></Label>
+                    <VerticalStackLayout>
+
+                        <HorizontalStackLayout Margin="15">
+                            <Label Text="Nombre materia: " 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Nombre de materia"
+                               BackgroundColor="Grey"
+                                   WidthRequest="300"
+                                   Text="{Binding NomMateria}"></Entry>
+                        </HorizontalStackLayout>
+                        <Label Text="Parcial 1" 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="0,8,0,0"></Label>
+                        <HorizontalStackLayout Margin="5">
+
+                            <Label Text="Valor:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                               BackgroundColor="Grey"
+                               Margin="5"
+                               WidthRequest="200"
+                                   Text="{Binding valor1}"></Entry>
+                            <Label Text="Calificacion:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                               BackgroundColor="Grey"
+                               WidthRequest="200"
+                               Margin="5"
+                                   Text="{Binding calificacion1}"></Entry>
+                        </HorizontalStackLayout>
+                        <Label Text="Parcial 2" 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="0,20,0,0"></Label>
+                        <HorizontalStackLayout Margin="5">
+
+                            <Label Text="Valor:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                               BackgroundColor="Grey"
+                               Margin="5"
+                               WidthRequest="200"
+                                   Text="{Binding valor2}"></Entry>
+                            <Label Text="Calificacion:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                               BackgroundColor="Grey"
+                               WidthRequest="200"
+                               Margin="5"
+                                   Text="{Binding calificacion2}"></Entry>
+                        </HorizontalStackLayout>
+                        <Label Text="Parcial 3" 
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="0,20,0,0"></Label>
+                        <HorizontalStackLayout Margin="5">
+
+                            <Label Text="Valor:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Valor (%)"
+                               BackgroundColor="Grey"
+                               WidthRequest="200"
+                               Margin="5"
+                                   Text="{Binding valor3}"></Entry>
+                            <Label Text="Calificacion:"
+                               FontFamily="pixel"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"></Label>
+                            <Entry Placeholder="Calificacion"
+                               BackgroundColor="Grey"
+                               WidthRequest="200"
+                               Margin="5"
+                                   IsEnabled="False"
+                                   x:Name="txtCalificacion3"
+                                   Text="{Binding calificacion3}"></Entry>
+                        </HorizontalStackLayout>
+                        <Button Text="Evaluar"
+                                Margin="10"
+                                FontFamily="pixel"
+                                FontSize="Medium"
+                                x:Name="btnEvaluar"
+                                Clicked="btnEvaluar_Clicked"
+                                Command="{Binding Consejo}"></Button>
+                        <Button Text="Calcular Calificacion"
+                            Margin="10"
+                            FontFamily="pixel"
+                            FontSize="Medium"
+                                x:Name="btnCalcularCalificacion"
+                                IsEnabled="False"
+                                Command="{Binding Calculo}"></Button>
+                        <Label Text="..."
+                               FontSize="Medium"
+                               FontFamily="pixel"
+                               HorizontalTextAlignment="Center"></Label>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
